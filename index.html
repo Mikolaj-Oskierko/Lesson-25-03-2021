@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Advanced Selectors</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="CSS/style.css"/>
+</head>
+
+<body>
+	<header>
+		<h1>Advanced Selectors</h1>
+	</header>
+	<nav class="FlowLeft">
+		<a href="#1">Home</a>
+		<a href="#2">Paragraph</a>
+		<a href="#3">Is there something?</a>
+		<a href="#4">Nothing</a>
+		<a href="#5">Don't click</a>
+		<a href="#6">There's nothing here</a>
+		<a href="#7">It's just a sample</a>
+		<a href="#8">Good bye</a>
+	</nav>
+	<div>
+		<p class="FlowRight">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>	
+	<main>
+		<section>
+			<h2>Styling Specyfic Objects</h2>
+			<ul>
+				<li>Wy have focused on <span class="Mark">type</span> selectors.</li>
+				<li>What if you don't want to style <span class="Mark">all</span> of the links, just some? or just some of the lists?</li>
+				<li>CSS gives options</li>
+			</ul>
+		</section>
+		<section>
+			<h2>CSS selectors</h2>
+			<ul>
+				<li>Some selectors follow the DOM</li>
+				<li>Descendant selectors <span class="Mark">(nav a)</span></li>
+				<ul>
+					<li>Style all of the anchor links inside a <span class="Mark">nav</span> tag</li>
+				</ul>
+				<li>Child selectors <span class="Mark">(nav > a)</span></li>
+				<ul>
+					<li>More constraining, the anchor elements must be a child of the <span class="Mark">nav</span>, no intermediate tags, e.g. paragraph</li>
+				</ul>
+				<li>Adjecent sibling <span class="Mark">(hl + ol)</span>
+					<ul>
+						<li>Elements must be at same level and follow each other</li>
+					</ul>
+			</ul>
+		</section>
+		<section>
+			<h2># id selectors</h2>
+			<ul>
+				<li>Used to identify a single element in the DOM, shoud be unique.</li>
+				<li>Was used extensively for <span class="Mark">&#60;div id = "header"&#62;, &#60;div id="footer"&#62;</span>, etc</li>
+				<li>There is a small movement to move the use of id out of CSS. Id is used for javascript too.</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Class selector</h2>
+			<ul>
+				<li>.class selector</li>
+				<ul>
+					<li>Used to identify an element in the DOM that is part of a special class items.</li>
+					<li>Think of thumbnail images, all of the links that are in the navigation, your social media images etc...</li>
+				</ul>
+			</ul>
+		</section>
+		<section>
+			<h2>Narrowing the scope</h2>
+			<ul>
+				<li>As you get more advanced pages, you will want to narrow the scope of the action.</li>
+				<li><span class="Mark">p.main</span> - paragraph using the "main" class</li>
+				<li><span class="Mark">header img.special</span> - paragraph inside header that use special class</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Expanding the scope</h2>
+			<ul>
+				<li>You can combine elements with a comma</li>
+				<ul>
+					<li><span class="Mark">p, hl, #mail, .special</span>{... rules to apply to all of them ...}</li>
+				</ul>
+				<li>Review: What happenes when there are multiple rules for the same selector?</li>
+				<ul>
+					<li>When there are conflicts, use the one processed most recently</li>
+					<li>UNLESS a rule has <span class="Mark">!important</span></li>
+				</ul>
+			</ul>
+		</section>
+		<section>
+			<h2>More Attribute Selectors</h2>
+			<ul>
+				<li>Universal</li>
+				<ul>
+					<li><span class="Mark">*</span> applies to every element on the page.</li>
+					<li><span class="Mark">Ackk!!</span> Try this!</li>
+				</ul>
+				<li>Attribute Selectors</li>
+				<ul>
+					<li><span class="Mark">a[href='info.html']</span> - styling every link that contains <span class="Mark">info.html</span>.</li>
+				</uL>
+				<li>Pseudo-Classes</li>
+				<li>Pseudo-Elements</li>
+			</ul>
+		</section>
+		<section>
+		<h2>Attribute selectors</h2>
+		<ul>
+			<li>You may want to search the DOM for certain elements that have an attribute you are looking for.</li>
+			<ul>
+				<li>All of the images that use <span class="Mark">gif</span> files...</li>
+				<li>All of images that have empty alt text...</li>
+				<li>All of the links that go to government sites...</li>
+			</ul>
+		</ul>
+		</section>
+		<section>
+			<h2>Using operators</h2>
+			<ul>
+				<li>Operators can be used to find those attribute values you are looking for.</li>
+				<ul>
+					<li><span class="Mark">^</span>: match the beginning exactly <span class="Mark">a[href^='http://umich']</span></li>
+					<li><span class="Mark">$</span>: match the end exacly <span class="Mark">img[src$='png']</span> apply to .png images.</li>
+					<li><span class="Mark">*</span>: wildcard <span class="Mark">a [href*='umich']</span></li>
+				</ul>
+			</ul>
+		</section>
+	</main>
+	<footer class="Clean">
+		<h3>The Good News</h3>
+		<p>You can use style sheets from others to style your code, just by adding classes</p>
+		<p>You can override style sheets from others just by rewriting the class, or making your own version of it and linking it lasy.</p>
+	</footer>
+</body>
+</html>
